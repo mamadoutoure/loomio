@@ -115,7 +115,7 @@ FactoryGirl.define do
     group_description "My text outlining the group"
     viewable_by 'members'
     members_invitable_by 'admins'
-    discussion_title Faker::Name.name
+    discussion_title "Problems with the use of Faker in titles"
     discussion_description "My text outlining the discussion"
     motion_title {Faker::Name.name}
     motion_description "My text outlining the proposal"
