@@ -4,7 +4,7 @@ class SendActivitySummary
     User.daily_activity_email_recipients.each do |user|
       results = CollectsRecentActivityByGroup.new(user, since: since_time).results
       if results.present?
-        UserMailer.daily_activity(user, results, since_time).deliver!
+        UserMailer.delay.daily_activity(user, results, since_time)
       end
     end
   end
